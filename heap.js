@@ -1,7 +1,7 @@
 class Heap {
     constructor(x, size = 1e5) {
         this.priorityQueue = [];
-        this.childrenPower = Math.pow(2, x);
+        this.childrenPower = x >= 0 ? Math.pow(2, x) : 2;
         this.size = size;
     }
 
