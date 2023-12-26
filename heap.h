@@ -17,7 +17,9 @@ private:
 
 public:
     Heap(int x,int size=1e5){
-        childrenPower = pow(2,x);
+        if(x>=0){ // ensure it is a valid children count, otherwise keep '2' as default
+            childrenPower = pow(2,x);
+        }
         priority_queue.reserve(size);
     }
 
